@@ -53,7 +53,26 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
               </div></h1>
-      
+              
+              <input type="text" value="created link" id="myInput">
+              <button onclick="myFunction()">Copy link</button>
+              
+              <script>
+              function myFunction() {
+                // Get the text field
+                var copyText = document.getElementById("myInput");
+              
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+              
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+                
+                // Alert the copied text
+                alert("Copied the text: " + copyText.value);
+              }
+              </script>
       <h1 class="credit">Made with <span style="color:tomato;font-size:20px;">❤</span> by <a  href="https://www.learningrobo.com/">Kiran Kumar Malik</a></h1>
     </div>
     
